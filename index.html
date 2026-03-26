@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashley Nicole ✝️💜</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d0010">
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+<h1 onclick="toggleSecret()">Ashley Nicole ✝️💜</h1>
+
+<p id="secret" class="hidden">
+God is walking with you through everything.
+You are deeply loved.
+</p>
+
+<!-- CENTER PHOTO: Ashley with Jesus & Angels -->
+<div class="card" style="text-align:center">
+  <h2>💜 Always Protected ✝️</h2>
+  <img src="family.jpg" class="main-photo">
+  <p style="margin-top:10px;font-style:italic;color:#d8a0e8">
+    Covered in love. Watched over. Never alone.
+  </p>
+</div>
+
+<!-- LETTER -->
+<div class="card">
+<h2>💜 A Message</h2>
+<div id="letter"></div>
+</div>
+
+<!-- MUSIC -->
+<div class="card">
+<h2>🎵 Peace Music</h2>
+<button onclick="playMusic()">Play Worship</button>
+</div>
+
+<!-- VERSE -->
+<div class="card">
+<h2>✝️ Scripture</h2>
+<p id="verse"></p>
+<button onclick="newVerse()">New Verse</button>
+</div>
+
+<!-- PRAYER -->
+<div class="card">
+<h2>🙏 Prayer</h2>
+<button onclick="pray()">Pray for Me</button>
+<p id="prayer"></p>
+</div>
+
+<!-- TASKS -->
+<div class="card">
+<h2>🌿 Daily Healing</h2>
+<div class="task" onclick="toggleTask(this)">🙏 Pray</div>
+<div class="task" onclick="toggleTask(this)">💧 Water</div>
+<div class="task" onclick="toggleTask(this)">🚶 Walk</div>
+<div class="task" onclick="toggleTask(this)">📖 Bible</div>
+</div>
+
+<!-- JOURNAL -->
+<div class="card">
+<h2>💭 Journal</h2>
+<textarea id="journal"></textarea>
+<button onclick="saveJournal()">Save</button>
+</div>
+
+<!-- MESSAGE -->
+<div class="card">
+<h2>💌 Speak Your Heart</h2>
+<textarea id="msg"></textarea>
+<button onclick="reply()">Send</button>
+<p id="response"></p>
+</div>
+
+<p class="footer">stay strong… God’s got you ✝️💜</p>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
